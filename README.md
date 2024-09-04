@@ -30,25 +30,25 @@ Timers play a crucial role in generating precise delays required for controlling
 
 
 ## Example Script and Decoded Script
-inc_lcd 3 --------------> 0103
-set_delay 30 -----------> 041E
-dec_lcd 3 --------------> 0203
-rra_lcd 4 --------------> 0334
-clear_lcd --------------> 05
-stepper_deg 35 ---------> 0623
-inc_lcd 5 --------------> 0105
-stepper_scan 20,60 -----> 07143C
+inc_lcd 3 --------------> 0103  
+set_delay 30 -----------> 041E  
+dec_lcd 3 --------------> 0203  
+rra_lcd 4 --------------> 0334  
+clear_lcd --------------> 05  
+stepper_deg 35 ---------> 0623  
+inc_lcd 5 --------------> 0105  
+stepper_scan 20,60 -----> 07143C  
 sleep ------------------> 08
 
 
 Explenation:  
-inc_lcd 3: Increases the LCD value by 3 with delay d (0103). inc_lcd opcode = 0x01, and has 1 HEX operand.
-set_delay 30: Sets a delay of 30 units (30*10ms) (041E). set_delay  opcode = 0x04 and has 1 HEX operand.
-dec_lcd 3: Decreases the LCD value by 3 with delay d (0203). dec_leds  opcode = 0x02, has 1 HEX operand.
-rra_lcd A: Rotates the LCD display right with char '4' (0334). rrc_lcd  opcode = 0x03, and has 1 HEX operand.
-clear_lcd: Clears the LCD screen (05). clear_lcd  opcode = 0x05 and has no operand.
-stepper_deg 35: Moves the stepper motor to 35 degrees (0623). stepper_deg  opcode = 0x06 and has 1 HEX operand .
-stepper_scan 20, 60: Scans the stepper motor between 20 and 60 degrees (07143C). stepper_scan  opcode = 0x07 and has 2 HEX operands.
+inc_lcd 3: Increases the LCD value by 3 with delay d (0103). inc_lcd opcode = 0x01, and has 1 HEX operand.  
+set_delay 30: Sets a delay of 30 units (30*10ms) (041E). set_delay  opcode = 0x04 and has 1 HEX operand.  
+dec_lcd 3: Decreases the LCD value by 3 with delay d (0203). dec_leds  opcode = 0x02, has 1 HEX operand.  
+rra_lcd A: Rotates the LCD display right with char '4' (0334). rrc_lcd  opcode = 0x03, and has 1 HEX operand.  
+clear_lcd: Clears the LCD screen (05). clear_lcd  opcode = 0x05 and has no operand.  
+stepper_deg 35: Moves the stepper motor to 35 degrees (0623). stepper_deg  opcode = 0x06 and has 1 HEX operand .  
+stepper_scan 20, 60: Scans the stepper motor between 20 and 60 degrees (07143C). stepper_scan  opcode = 0x07 and has 2 HEX operands.  
 sleep: Puts the system to sleep (08). sleep  opcode = 0x08 and has no operands.
 
 
